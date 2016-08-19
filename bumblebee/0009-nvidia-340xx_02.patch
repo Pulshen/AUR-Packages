@@ -1,0 +1,46 @@
+From 518c63b02ba604b0f5bbc4ce3383962044f33b28 Mon Sep 17 00:00:00 2001
+From: sudokamikaze <pulshencode@outlook.com>
+Date: Fri, 19 Aug 2016 17:10:40 +0300
+Subject: [PATCH] Support for 340xx[2]
+
+---
+ src/module.c | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+
+diff --git a/src/module.c b/src/module.c
+index a6c9761..5f58620 100644
+--- a/src/module.c
++++ b/src/module.c
+@@ -94,15 +94,21 @@ int module_load(char *module_name, char *driver) {
+ int module_unload(char *driver) {
+ 
+ 	char uvm[] = "nvidia_uvm";
++  char drm[] = "nvidia_drm";
++	char modeset[] = "nvidia_modeset";
+ 	int uvm_is_loaded = module_is_loaded(uvm);
++  int drm_is_loaded = module_is_loaded(drm);
++	int modeset_is_loaded = module_is_loaded(modeset);
+ 
+-  if (uvm_is_loaded || *driver == 1) {
++  if (uvm_is_loaded || drm_is_loaded || modeset_is_loaded || *driver == 1) {
+     int retries = 30;
+-    bb_log(LOG_INFO, "Unloading UVM driver\n");
++    bb_log(LOG_INFO, "Unloading UVM/DRM/MODESET driver\n");
+     char *mod_argv[] = {
+       "modprobe",
+       "-r",
+       "nvidia_uvm",
++      "nvidia_drm",
++      "nvidia_modeset",
+ 			driver,
+       NULL
+     };
+@@ -153,7 +159,7 @@ int module_is_available(char *module_name) {
+   char *mod_argv[] = {
+     modprobe_bin,
+     "--dry-run",
+-    "--quiet",
++    "--quiet",sudo
+     module_name,
+     NULL
+   };
