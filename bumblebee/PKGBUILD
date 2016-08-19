@@ -34,6 +34,7 @@ source=("http://www.bumblebee-project.org/${pkgname}-${pkgver}.tar.gz"
         "0007-bb_mutebblogger.patch"
         "0008-nvidia-340xx.patch::https://github.com/Sudokamikaze/Bumblebee/commit/72e2f662664b94131ca6df9aeae841aa5681a4e9.patch"
         "0009-nvidia-340xx_02.patch::https://github.com/Sudokamikaze/Bumblebee/commit/518c63b02ba604b0f5bbc4ce3383962044f33b28.patch"
+        "0010-fix.patch::https://github.com/Sudokamikaze/Bumblebee/commit/3f2dda849ebeb6385a1d375bf26a1db096e4c3fb.patch"
         "bumblebee.conf")
 sha256sums=('1018703b07e2f607a4641249d69478ce076ae5a1e9dd6cff5694d394fa7ee30e'
             'aff3528d17a77ff19b4e0a7a10682b8351456f11795f71ef62b315e774fb408a'
@@ -45,6 +46,7 @@ sha256sums=('1018703b07e2f607a4641249d69478ce076ae5a1e9dd6cff5694d394fa7ee30e'
             'cbe3e1717bc80146b87d8f2ab1158ee9e094ea5bb2ca9a4a8c09c24b086a7792'
             '67fd9d681ad47fe78b11cb351e0144b69865d5d9b431d7a81abc08497952920e'
             '34a1b39c49dd97dae6d11a42a63ac74d56f9800ef9254eaf62b422bb79e38899'
+            'e9016d442595d613c4f56aa09492c1a825a6aaa06278ffe1ca6c142660ab941f'
             'aa3750984869a57126e557f08c53b97ba1161a479e504ce8be7ef7b2b6a519dd')
 
 build() {
