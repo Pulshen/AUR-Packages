@@ -22,8 +22,8 @@ pkgver() {
 package() {
   cd Openbox-Monitor
 
-  install -m 755 obmonitor.sh /bin/obmonitor
-  install -m 755 obmonitor-autostart.sh /bin/obmonitor-autostart
+sudo install -m 755 obmonitor.sh /bin/obmonitor
+sudo install -m 755 obmonitor-autostart.sh /bin/obmonitor-autostart
 }
 
 # vim: ts=2 sw=2 et:
