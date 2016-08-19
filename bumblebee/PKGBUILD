@@ -72,7 +72,7 @@ package() {
 
     # Blacklist nvidia and nouveau modules
     # Reference: https://github.com/Bumblebee-Project/Bumblebee/issues/719
-    install -Dm644 "${srcdir}/bumblebee.conf" "${pkgdir}/etc/modprobe.d/bumblebee.conf"
+    install -Dm644 "${srcdir}/bumblebee.conf" "${pkgdir}/usr/lib/modprobe.d/bumblebee.conf"
 
     # Install systemd unit
     install -Dm644 "scripts/systemd/bumblebeed.service" "${pkgdir}/usr/lib/systemd/system/bumblebeed.service"
