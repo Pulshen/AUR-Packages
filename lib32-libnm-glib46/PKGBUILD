@@ -21,7 +21,7 @@ makedepends=('dhcpcd' 'dhclient' 'dhcp-client' 'gtk-doc' 'intltool' 'iproute2'
              'lib32-libnl' 'lib32-polkit' 'lib32-libsoup' 'lib32-libteam'
              'modemmanager' 'ppp' 'python2' 'vala' 'wpa_supplicant')
 replaces=('lib32-libnm-glib')
-source=("http://ftp.gnome.org/pub/gnome/sources/NetworkManager/${pkgver%.*.*}/NetworkManager-${pkgver}.tar.xz"
+source=("http://ftp.gnome.org/pub/gnome/sources/NetworkManager/${pkgver%.*}/NetworkManager-${pkgver}.tar.xz"
         'disable_set_hostname.patch')
 sha256sums=('c0c02a21827661a2bef70711ec8e5b8b83880b5cd59cbd367444b9ea8b7d86b8'
             '25056837ea92e559f09563ed817e3e0cd9333be861b8914e45f62ceaae2e0460')
