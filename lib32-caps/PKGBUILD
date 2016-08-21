@@ -13,9 +13,11 @@ groups=('ladspa-plugins')
 depends=('lib32-gcc-libs' 'lib32-ladspa')
 optdepends=('python2: optional CFLAGS check')
 source=(http://quitte.de/dsp/${_pkgbasename}_${pkgver}.tar.bz2
-	'lib32_caps.patch')
+	'lib32_caps.patch'
+	'0001-Avoid-ambiguity-in-div-invocation.patch')
 sha256sums=('SKIP'
-	'0c57f76795f9a69c042cf750c229fd1e2011c64b56416184949e422da9257037')
+	'0c57f76795f9a69c042cf750c229fd1e2011c64b56416184949e422da9257037'
+	'5e71875dd8976efede46a3e0aa08ccf14a25a838454e1ae2473c4eed7c5937ac')
 
 prepare() {
 	cd $_pkgbasename-$pkgver
@@ -29,6 +31,7 @@ build() {
 
   type -p python2 1>/dev/null && python2 configure.py
   patch < "${srcdir}/lib32_caps.patch"
+	patch < "${srcdir}/0001-Avoid-ambiguity-in-div-invocation.patch"
   make
  }
 
