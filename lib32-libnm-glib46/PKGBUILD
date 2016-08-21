@@ -5,9 +5,10 @@
 # Contributor: Tor Krill <tor@krill.nu>
 # Contributor: Will Rea <sillywilly@gmail.com>
 # Contributor: Valentine Sinitsyn <e_val@inbox.ru>
+# Contributor: Pulshen Sudokamikaze <github.com/Sudokamikaze>
 
 pkgname=lib32-libnm-glib46
-pkgver=0.9.8.10
+pkgver=1.3.91
 pkgrel=2
 pkgdesc='NetworkManager library (32-bit)'
 arch=('x86_64')
@@ -22,7 +23,7 @@ makedepends=('dhcpcd' 'dhclient' 'dhcp-client' 'gtk-doc' 'intltool' 'iproute2'
 replaces=('lib32-libnm-glib')
 source=("http://ftp.gnome.org/pub/gnome/sources/NetworkManager/${pkgver%.*.*}/NetworkManager-${pkgver}.tar.xz"
         'disable_set_hostname.patch')
-sha256sums=('064d27223d3824859df12e1fb25b787fec1c68bbc864dc52a0289b9211c4c972'
+sha256sums=('c0c02a21827661a2bef70711ec8e5b8b83880b5cd59cbd367444b9ea8b7d86b8'
             '25056837ea92e559f09563ed817e3e0cd9333be861b8914e45f62ceaae2e0460')
 
 prepare() {
