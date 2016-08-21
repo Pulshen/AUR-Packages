@@ -2,8 +2,11 @@
 My repository for archlinux
 
 ## Usage
+=====
+
+Add to your /etc/pacman.conf
 ---------------------
-# cat >> /etc/pacman.conf
-[sudokamikaze]
-Server = https://raw.github.com/sudokamikaze/AUR-Packages/master/repo/$arch
- # pacman -Sy
+
+    [sudokamikaze]
+    Server = https://raw.github.com/sudokamikaze/AUR-Packages/master/repo/$arch
+    # pacman -Sy
